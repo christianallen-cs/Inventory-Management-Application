@@ -10,6 +10,8 @@ Note: Do not remove any elements that were included in the screen. You may add a
 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 
+ -- Added about.html in the templates' folder, and created a very simple webpage describing to the web viewer how cool big bert's bikes are. This page also included a button to navigate to the mainscreen.html page, and some light formatting to put the text in the middle of the screen. In mainscreen.html, I updated lines 20 - 22 to include a button to navigate to the new about.html page.
+
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 
 Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
