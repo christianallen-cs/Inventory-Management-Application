@@ -4,8 +4,9 @@
 ## D287 – JAVA FRAMEWORKS
 
 C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
-
 Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
+
+ -- In mainscreen.html I changed lines 19, 21, and 53. These changes altered the shops, parts, and product section names. No additional elements, colors, styles etc were added.
 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
 
