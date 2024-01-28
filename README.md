@@ -16,6 +16,8 @@ E.  Add a sample inventory appropriate for your chosen store to the application.
 
 Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
 
+ -- -- In BootStrapData.java I added my five different types of skateboard products, and five skateboard parts. Lines 40 - 80 are the parts, and lines 97 - 106 are the different type of skateboard products. Added spacing, and formatting in written code to make it easier to read on various lines throughout the file. On line 42, and 101 I added an if statement to prevent duplicate parts / products from being added if the list was not 0.
+
 F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
 •  The “Buy Now” button must be next to the buttons that update and delete products.
 •  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
