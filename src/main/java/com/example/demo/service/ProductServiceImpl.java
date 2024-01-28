@@ -77,4 +77,11 @@ public class ProductServiceImpl implements ProductService{
             save(theProduct);
         }
     }
+
+    public int totalInventory(long productId) {
+        int intProductId = (int) productId;
+        Product theProduct = findById(intProductId);
+        int newInv = theProduct.getInv();
+        return newInv;
+    }
 }

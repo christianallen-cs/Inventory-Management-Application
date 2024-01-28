@@ -18,5 +18,6 @@ public interface ProductService {
     public void deleteById(int theId);
     public List<Product> listAll(String keyword);
     public void decrInventory(long productId);
+    public int totalInventory(long productId);
 
 }
