@@ -66,4 +66,15 @@ public class ProductServiceImpl implements ProductService{
         }
         return (List<Product>) productRepository.findAll();
     }
+
+    public void decrInventory(long productId) {
+        int intProductId = (int) productId;
+        Product theProduct = findById(intProductId);
+
+        if (theProduct.getInv() > 0) {
+            int currentInv = theProduct.getInv();
+            theProduct.setInv(currentInv - 1);
+            save(theProduct);
+        }
+    }
 }
