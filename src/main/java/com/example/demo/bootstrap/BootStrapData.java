@@ -33,44 +33,88 @@ public class BootStrapData implements CommandLineRunner {
     public BootStrapData(PartRepository partRepository, ProductRepository productRepository, OutsourcedPartRepository outsourcedPartRepository) {
         this.partRepository = partRepository;
         this.productRepository = productRepository;
-        this.outsourcedPartRepository=outsourcedPartRepository;
+        this.outsourcedPartRepository = outsourcedPartRepository;
     }
 
     @Override
     public void run(String... args) throws Exception {
 
-       /*
-        OutsourcedPart o= new OutsourcedPart();
-        o.setCompanyName("Western Governors University");
-        o.setName("out test");
-        o.setInv(5);
-        o.setPrice(20.0);
-        o.setId(100L);
-        outsourcedPartRepository.save(o);
-        OutsourcedPart thePart=null;
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            if(part.getName().equals("out test"))thePart=part;
-        }
+        if (partRepository.count() == 0) {
 
-        System.out.println(thePart.getCompanyName());
-        */
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            System.out.println(part.getName()+" "+part.getCompanyName());
+            OutsourcedPart deck = new OutsourcedPart();
+            deck.setCompanyName("Baker");
+            deck.setName("Boards");
+            deck.setInv(5);
+            deck.setPrice(75.0);
+            deck.setId(100L);
+            outsourcedPartRepository.save(deck);
+
+            OutsourcedPart bearings = new OutsourcedPart();
+            bearings.setCompanyName("Bones");
+            bearings.setName("Bones Bearings");
+            bearings.setInv(5);
+            bearings.setPrice(25.0);
+            bearings.setId(200L);
+            outsourcedPartRepository.save(bearings);
+
+            OutsourcedPart trucks = new OutsourcedPart();
+            trucks.setCompanyName("Independent");
+            trucks.setName("Indy Trucks");
+            trucks.setInv(5);
+            trucks.setPrice(55.0);
+            trucks.setId(300L);
+            outsourcedPartRepository.save(trucks);
+
+            OutsourcedPart wheels = new OutsourcedPart();
+            wheels.setCompanyName("Spitfire");
+            wheels.setName("Spitfire Wheels");
+            wheels.setInv(5);
+            wheels.setPrice(40.0);
+            wheels.setId(400L);
+            outsourcedPartRepository.save(wheels);
+
+            OutsourcedPart grip = new OutsourcedPart();
+            grip.setCompanyName("Mob");
+            grip.setName("Grip Tape");
+            grip.setInv(5);
+            grip.setPrice(10.0);
+            grip.setId(500L);
+            outsourcedPartRepository.save(grip);
         }
 
         /*
-        Product bicycle= new Product("bicycle",100.0,15);
-        Product unicycle= new Product("unicycle",100.0,15);
-        productRepository.save(bicycle);
-        productRepository.save(unicycle);
+        OutsourcedPart thePart = null;
+        List<OutsourcedPart> outsourcedParts = (List<OutsourcedPart>) outsourcedPartRepository.findAll();
+        for(OutsourcedPart part:outsourcedParts) {
+            System.out.println(part.getName() + " " + part.getCompanyName());
+            if(part.getName().equals("out test"))thePart = part;
+        }
+
+        System.out.println(thePart.getCompanyName());
+
+        List<OutsourcedPart> outsourcedParts = (List<OutsourcedPart>) outsourcedPartRepository.findAll();
+        for(OutsourcedPart part:outsourcedParts) {
+            System.out.println(part.getName() + " " + part.getCompanyName());
+        }
         */
 
+        if (productRepository.count() == 0) {
+            Product cruiser = new Product("Cruiser Board", 200.0, 15);
+            Product skateboard = new Product("Skateboard", 200.0, 15);
+            Product longBoard = new Product("Long Board", 300.0, 15);
+            Product surfSkate = new Product("Surf Skate", 250.0, 15);
+            Product electricBoard = new Product("Electric Skateboard", 500.0, 15);
+            productRepository.save(cruiser);
+            productRepository.save(skateboard);
+            productRepository.save(longBoard);
+            productRepository.save(surfSkate);
+            productRepository.save(electricBoard);
+        }
+
         System.out.println("Started in Bootstrap");
-        System.out.println("Number of Products"+productRepository.count());
+        System.out.println("Number of Products" + productRepository.count());
         System.out.println(productRepository.findAll());
-        System.out.println("Number of Parts"+partRepository.count());
+        System.out.println("Number of Parts" + partRepository.count());
         System.out.println(partRepository.findAll());
 
     }
