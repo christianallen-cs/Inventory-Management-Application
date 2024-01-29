@@ -43,4 +43,6 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 
+ -- Added 4 total unit tests in PartTest.java. These 4 tested various min / max values for the getMax, and getMin methods. This was done on lines 160 - 193.
+
 J.  Remove the class files for any unused validators in order to clean your code.
