@@ -109,10 +109,10 @@ public class BootStrapData implements CommandLineRunner {
         */
 
         if (productRepository.count() == 0) {
-            Product cruiser = new Product("Cruiser Board", 200.0, 15);
-            Product skateboard = new Product("Skateboard", 200.0, 15);
+            Product cruiser = new Product("Cruiser Board", 250.0, 15);
+            Product skateboard = new Product("Skateboard", 250.0, 15);
             Product longBoard = new Product("Long Board", 300.0, 15);
-            Product surfSkate = new Product("Surf Skate", 250.0, 15);
+            Product surfSkate = new Product("Surf Skate", 275.0, 15);
             Product electricBoard = new Product("Electric Skateboard", 500.0, 15);
             productRepository.save(cruiser);
             productRepository.save(skateboard);
