@@ -47,30 +47,38 @@ public class BootStrapData implements CommandLineRunner {
             deck.setInv(5);
             deck.setPrice(75.0);
             deck.setId(100L);
+            deck.setMinInv(0);
+            deck.setMaxInv(20);
             outsourcedPartRepository.save(deck);
 
             OutsourcedPart bearings = new OutsourcedPart();
             bearings.setCompanyName("Bones");
-            bearings.setName("Bones Bearings");
+            bearings.setName("Bearings");
             bearings.setInv(5);
             bearings.setPrice(25.0);
             bearings.setId(200L);
+            bearings.setMinInv(0);
+            bearings.setMaxInv(20);
             outsourcedPartRepository.save(bearings);
 
             OutsourcedPart trucks = new OutsourcedPart();
             trucks.setCompanyName("Independent");
-            trucks.setName("Indy Trucks");
+            trucks.setName("Trucks");
             trucks.setInv(5);
             trucks.setPrice(55.0);
             trucks.setId(300L);
+            trucks.setMinInv(0);
+            trucks.setMaxInv(20);
             outsourcedPartRepository.save(trucks);
 
             OutsourcedPart wheels = new OutsourcedPart();
             wheels.setCompanyName("Spitfire");
-            wheels.setName("Spitfire Wheels");
+            wheels.setName("Wheels");
             wheels.setInv(5);
             wheels.setPrice(40.0);
             wheels.setId(400L);
+            wheels.setMinInv(0);
+            wheels.setMaxInv(20);
             outsourcedPartRepository.save(wheels);
 
             OutsourcedPart grip = new OutsourcedPart();
@@ -79,6 +87,8 @@ public class BootStrapData implements CommandLineRunner {
             grip.setInv(5);
             grip.setPrice(10.0);
             grip.setId(500L);
+            grip.setMinInv(0);
+            grip.setMaxInv(20);
             outsourcedPartRepository.save(grip);
         }
 
