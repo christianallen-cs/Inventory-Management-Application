@@ -30,6 +30,9 @@
 
 <p><input type="submit" value="Submit" /></p>
 </form>
+<div th:if="${errorMessage}" class="error">
+    <p th:text="${errorMessage}"></p>
+</div>
 <p><errors path="price" cssClass=""error/><p>
 
 <a href="http://localhost:8080/">Link
