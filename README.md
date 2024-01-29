@@ -32,6 +32,8 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 •  Rename the file the persistent storage is saved to.
 •  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
 
+ -- Added additional fields to parts entity in Parts.java file on lines 32 - 35. Initialized those variables into the public parts object on line 45 - 59. Added get / set methods for new variables on lines 94 - 106. Added two new columns in mainscreen.html on lines 41 and 42. Functionality for these two columns was added on lines 51 and 52. In BootStrapData.java, I set the min / max inventory for each part individually. This took place on lines 50-51, 60-61, 70-71, 80-81, and 90-91.
+
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
 •  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
