@@ -39,6 +39,8 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
 •  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
 •  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
+ -- Inside AddInhousePartController.java, altered the if statement under @PostMapping on lines 45 - 48 to create an error message if input was not within range of min / max values. The same thing was done in AddOutsourcedPartController.java on lines 46 - 49. In both InhousePartForm.html, and OutsourcedPartForm.html, I added new <div> elements to display the error message created in the respective controller files. This was done on lines 32 - 35 in both files. 
+
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 
 J.  Remove the class files for any unused validators in order to clean your code.
