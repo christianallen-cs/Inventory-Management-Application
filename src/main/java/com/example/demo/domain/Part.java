@@ -117,7 +117,7 @@ public abstract class Part implements Serializable {
         this.products = products;
     }
 
-    public static boolean isInvInRange(int inv, int minInv, int maxInv) {
+    public boolean isInvInRange(int inv, int minInv, int maxInv) {
         return inv >= minInv && inv <= maxInv;
     }
 
